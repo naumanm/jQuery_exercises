@@ -2,11 +2,8 @@
 
 $(document).ready(function() {
 
-	$("input").on("click", function(e) {
-		console.log($("input[type=text]").val());
-
-	$(".even").css("background-color", $("input[type=text]").val());
-
+	$("form").on("submit", function(e) {
+		$(".even").css("background-color", $("input[type=text]").val());
 	});	
 
 });
