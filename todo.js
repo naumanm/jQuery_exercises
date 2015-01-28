@@ -9,18 +9,17 @@ $(document).ready(function() {
 			('<div class="row">' + 
 				'<input type="checkbox"></checkbox>' + 
 				$('input[type=text]').val() +
-				'<input type="checkbox" checked="checked"></checkbox>' + 
-				//'<button>my button</button>' + 
+				//'<input type="checkbox" checked="checked"></checkbox>' + 
+				'<button>remove</button>' + 
 			'</div>');
 	});
 
-	// this works too!
-	// 	$("body").on("click", "button", function(e) {
-	// 		console.log("this is a test1");
-	// 	});
+	$("body").on("click", "button", function(e) {
+		console.log("this is a test1");
+	});
 
 	$("body").on("click", "input[type='checkbox']", function(e) {
-		$(this).parent().addClass("completed");
+		$(this).parent().toggleClass("completed");
 		console.log("this is a test2");
 	});
 
