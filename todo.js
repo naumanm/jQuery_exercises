@@ -10,19 +10,19 @@ $(document).ready(function() {
 				'<input type="checkbox"></checkbox>' + 
 				$('input[type=text]').val() +
 				'<input type="checkbox" checked="checked"></checkbox>' + 
-				'<button>my button</button>' + 
-				'hello' +
+				//'<button>my button</button>' + 
 			'</div>');
 	});
 
-
-	$("body").on("click", "button", function(e) {
-		console.log("this is a test1");
-	});
+	// this works too!
+	// 	$("body").on("click", "button", function(e) {
+	// 		console.log("this is a test1");
+	// 	});
 
 	$("body").on("click", "input[type='checkbox']", function(e) {
 		$(this).parent().addClass("completed");
 		console.log("this is a test2");
 	});
+
 
 });
