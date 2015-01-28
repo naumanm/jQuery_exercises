@@ -3,7 +3,7 @@
 $(document).ready(function() {
 
 	$("form").on("click", function(e) {
-		console.log($("input[type=text]").val());
+		//console.log($("input[type=text]").val());
 
 		$("body").append
 			('<div class="row">' + 
@@ -15,6 +15,8 @@ $(document).ready(function() {
 	});
 
 	$("body").on("click", "button", function(e) {
+		$(this).parent().remove();
+		// $(this).remove();
 		console.log("this is a test1");
 	});
 
