@@ -1,19 +1,22 @@
 $(document).ready(function() {
 
-  	window.addEventListener('keydown', function(event){
+	var myArray = [];
 
-  	// how to get the key press?
-	if (event.keyCode === 39) {
-		// empty password error message should be appended to the page 
-		// that says "please enter a password" under 6
-		//
+	$( "#myPassword" ).keypress(function(e) {
+		( event.which == 13 )
 
+		console.log( event.which	 );
+		myArray.push(event.which);
+		console.log(myArray);
 
-	$("form").on("click", function(e) {	}
-		console.log("this is a test1");
+		if (myArray.length < 6) {
+			console.log("less than 6");
+		} else if (myArray.length === 6) {
+			console.log("equal to 6");
+		} else {
+			console.log("more than 6");
+		}
+
 	});
-
-
-
 
 });
