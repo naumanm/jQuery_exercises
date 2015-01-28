@@ -2,8 +2,8 @@
 
 $(document).ready(function() {
 
-	$("form").on("submit", function(e) {
-		$(".even").css("background-color", $("input[type=text]").val());
+	$(".myInput").on("submit", function(e) {
+		$("tr:even > td").css("background-color", $("input[type=text]").val());
 	});	
 
 });
