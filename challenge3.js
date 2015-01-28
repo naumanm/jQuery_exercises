@@ -3,9 +3,10 @@ $(document).ready(function() {
 	var myArray = [];
 
 	$( "#myPassword" ).keypress(function(e) {
-		( event.which == 13 )
 
 		myArray.push(event.which);
+
+		console.log(myArray);
 
 		if (myArray.length < 6) {
 			console.log("less than 6");
@@ -17,8 +18,11 @@ $(document).ready(function() {
 
 	});
 
-	$( "#myPassword" ).keypress(function(e) {
-
+	$( ".myForm" ).keypress(function(e) {
+		if (myArray.length < 1) {
+			alert("please enter your password");
+			console.log(myArray);
+		}
 	});
 
 
